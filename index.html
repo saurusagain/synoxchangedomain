@@ -3,126 +3,126 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>Dinonic API pindah domain</title>
+<title>Dinonic API pindah alamat</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,600;12..96,800&family=JetBrains+Mono:wght@400;600;800&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,400..900&family=IBM+Plex+Mono:wght@400;600&display=swap" rel="stylesheet">
 <style>
 :root{
-  --bg:#f1f5f9;--surface:#fff;--ink:#0f1b2a;--muted:#55697d;--line:#d3dde8;
-  --hero:#0b1a2b;--hero-ink:#eaf2fa;--hero-mute:#8da4ba;--grid:rgba(255,255,255,.06);
-  --old:#ff8a96;--new:#3ee0c0;--blue:#1f5eff;--blue-ink:#fff;--wa:#128c5a;--code:#0b1a2b;--code-ink:#dbe7f3;
+  --bg:#dfe5ea;--card:#f8f9fa;--ink:#1c2733;--muted:#58677a;--line:#b9c4cf;
+  --red:#b5473d;--blue:#35597f;--stamp:#a63a32;--code:#17212b;--code-ink:#dbe3ec;--ok:#2f6b52;
   box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px);
 }
 @media (prefers-color-scheme:dark){:root:not([data-theme="light"]){
-  --bg:#09111a;--surface:#121e2c;--ink:#e8eff6;--muted:#93a7ba;--line:#243445;
-  --hero:#0f2236;--blue:#6b9bff;--blue-ink:#09111a;--wa:#4fd69b;--code:#070d14;
+  --bg:#10161c;--card:#1a222b;--ink:#e7ecf1;--muted:#9aa8b5;--line:#2c3945;
+  --red:#c25a50;--blue:#6f95bd;--stamp:#e0766b;--code:#0b1015;--ok:#6fb896;
 }}
 :root[data-theme="dark"]{
-  --bg:#09111a;--surface:#121e2c;--ink:#e8eff6;--muted:#93a7ba;--line:#243445;
-  --hero:#0f2236;--blue:#6b9bff;--blue-ink:#09111a;--wa:#4fd69b;--code:#070d14;
+  --bg:#10161c;--card:#1a222b;--ink:#e7ecf1;--muted:#9aa8b5;--line:#2c3945;
+  --red:#c25a50;--blue:#6f95bd;--stamp:#e0766b;--code:#0b1015;--ok:#6fb896;
 }
 html{scroll-padding-top:env(safe-area-inset-top,0px)}
 *{box-sizing:border-box}
-body{margin:0;background:var(--bg);color:var(--ink);font:400 1.0625rem/1.65 "Bricolage Grotesque",system-ui,sans-serif}
-.mono{font-family:"JetBrains Mono",ui-monospace,monospace}
-.hero{background:var(--hero);color:var(--hero-ink);background-image:linear-gradient(var(--grid) 1px,transparent 1px),linear-gradient(90deg,var(--grid) 1px,transparent 1px);background-size:36px 36px}
-.wrap{max-width:52rem;margin:0 auto;padding:0 1.25rem}
-.hero .wrap{padding-top:3.5rem;padding-bottom:3.5rem}
-.status{display:inline-flex;align-items:center;gap:.5rem;font-weight:600;font-size:.9375rem;color:var(--new);border:1px solid currentColor;border-radius:999px;padding:.2rem .85rem}
-.status i{width:.5rem;height:.5rem;border-radius:50%;background:currentColor}
-h1{font-size:clamp(2.25rem,7vw,4rem);line-height:1.05;font-weight:800;letter-spacing:-.025em;margin:1.25rem 0 1rem;max-width:16ch}
-.lead{color:var(--hero-mute);max-width:50ch;margin:0 0 2rem}
-.domains{display:grid;gap:.5rem;margin-bottom:1.5rem}
-.d{font-size:clamp(1.05rem,4.6vw,2.1rem);font-weight:600;word-break:break-all;line-height:1.25}
-.d.old{color:var(--old);text-decoration:line-through;text-decoration-thickness:3px;opacity:.85}
-.d.new{color:var(--new);font-weight:800}
-.hero button{font:700 1rem "Bricolage Grotesque",sans-serif;cursor:pointer;border:0;border-radius:8px;padding:.75rem 1.25rem;background:var(--new);color:#06231d}
-button:focus-visible,a:focus-visible{outline:3px solid var(--blue);outline-offset:3px}
-.hero button:focus-visible{outline-color:#fff}
-main{padding:2.5rem 0 3.5rem}
-h2{font-size:1.5rem;font-weight:800;letter-spacing:-.01em;margin:0 0 .5rem}
-p{margin:0 0 1rem;max-width:62ch}
+body{margin:0;background:var(--bg);color:var(--ink);font:400 1.0625rem/1.65 "Archivo",system-ui,sans-serif}
+.mono{font-family:"IBM Plex Mono",ui-monospace,monospace}
+.air{height:14px;background:repeating-linear-gradient(-45deg,var(--red) 0 16px,var(--card) 16px 26px,var(--blue) 26px 42px,var(--card) 42px 52px)}
+.wrap{max-width:54rem;margin:0 auto;padding:0 1.25rem}
+h1{font-size:clamp(2.6rem,10vw,6rem);line-height:.95;font-weight:900;font-variation-settings:"wdth" 118;letter-spacing:-.02em;margin:3rem 0 1.25rem;max-width:11ch}
+.lead{font-size:1.1875rem;color:var(--muted);max-width:46ch;margin:0 0 2.5rem}
+h2{font-size:1.75rem;font-weight:800;font-variation-settings:"wdth" 108;letter-spacing:-.01em;margin:0 0 .5rem}
+p{margin:0 0 1rem;max-width:60ch}
 .muted{color:var(--muted)}
-.note{background:var(--surface);border:1px solid var(--line);border-left:5px solid var(--new);border-radius:10px;padding:1rem 1.25rem;margin-bottom:2.5rem}
+
+.label{background:repeating-linear-gradient(-45deg,var(--red) 0 16px,var(--card) 16px 26px,var(--blue) 26px 42px,var(--card) 42px 52px);padding:10px;border-radius:6px;box-shadow:0 14px 30px -18px rgba(10,20,30,.55)}
+.in{position:relative;background:var(--card);padding:2rem 1.5rem 1.75rem;display:grid;gap:1.25rem;overflow:hidden}
+.addr{display:grid;gap:.15rem}
+.tag{font-weight:600;font-size:.9375rem;color:var(--muted)}
+.dom{font-size:clamp(1.1rem,5.2vw,2.4rem);line-height:1.2;word-break:break-all}
+.dom.old{color:var(--muted);text-decoration:line-through;text-decoration-thickness:3px;text-decoration-color:var(--red)}
+.dom.new{font-weight:600}
+.in hr{border:0;border-top:3px dotted var(--line);margin:0}
+.stamp{position:absolute;right:1.25rem;top:1.25rem;transform:rotate(-9deg);border:4px double var(--stamp);color:var(--stamp);padding:.35rem .9rem;border-radius:4px;font-weight:900;font-variation-settings:"wdth" 125;font-size:clamp(1.25rem,5vw,2.25rem);letter-spacing:.06em;opacity:.92;animation:thump .55s .5s cubic-bezier(.2,1.4,.4,1) both}
+@keyframes thump{from{opacity:0;transform:rotate(-9deg) scale(2.2)}to{opacity:.92;transform:rotate(-9deg) scale(1)}}
+@media (prefers-reduced-motion:reduce){.stamp{animation:none}}
+@media (max-width:40rem){.stamp{position:static;justify-self:start;margin-bottom:.25rem}}
+button{font:700 1rem "Archivo",sans-serif;cursor:pointer;border:2px solid var(--ink);border-radius:6px;padding:.65rem 1.1rem;background:var(--ink);color:var(--card);justify-self:start}
+button:focus-visible,a:focus-visible{outline:3px solid var(--blue);outline-offset:3px}
+
+.note{margin:2.5rem 0 3.5rem;padding:1rem 1.25rem;border-left:6px solid var(--ok);background:var(--card);border-radius:0 6px 6px 0}
 .note p{margin:0}
-pre{background:var(--code);color:var(--code-ink);border-radius:12px;padding:1.1rem 1.25rem;overflow-x:auto;font-size:.875rem;line-height:1.75;margin:.75rem 0 2.5rem}
-.rm{color:#ff8a96;display:block}.ad{color:#3ee0c0;display:block}
-.cards{display:grid;gap:1rem}
-@media(min-width:42rem){.cards{grid-template-columns:1fr 1fr}}
-.card{background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:1.5rem;display:flex;flex-direction:column}
-.card.cdn{border-top:5px solid var(--blue)}
-.card.wa{border-top:5px solid var(--wa)}
+.steps{list-style:none;counter-reset:s;padding:0;margin:1.25rem 0 1.5rem;background:var(--card);border-radius:8px}
+.steps li{counter-increment:s;display:grid;grid-template-columns:3.25rem 1fr;gap:.5rem;padding:1.1rem 1.25rem;align-items:start}
+.steps li+li{border-top:3px dotted var(--line)}
+.steps li::before{content:counter(s);font-weight:900;font-variation-settings:"wdth" 125;font-size:2rem;line-height:1;color:var(--blue)}
+.steps b{display:block;font-size:1.125rem}
+.go{display:inline-block;background:var(--blue);color:var(--card);font-weight:700;text-decoration:none;border-radius:6px;padding:.7rem 1.2rem;margin-bottom:3.5rem}
+:root[data-theme="dark"] .go{color:#10161c}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]) .go{color:#10161c}}
+pre{background:var(--code);color:var(--code-ink);border-radius:8px;padding:1.1rem 1.25rem;overflow-x:auto;font-size:.875rem;line-height:1.8;margin:.75rem 0 3.5rem}
+.rm,.ad{display:block}.rm{color:#e49a93}.ad{color:#8fd0b0}
+.cards{display:grid;gap:1.25rem;margin-bottom:3rem}
+@media(min-width:44rem){.cards{grid-template-columns:1fr 1fr}}
+.card{background:var(--card);border-radius:8px;padding:1.5rem;display:flex;flex-direction:column;border-top:8px solid var(--blue)}
+.card.wa{border-top-color:var(--ok)}
 .card p{flex:1}
-.url{font-size:.8125rem;color:var(--muted);word-break:break-all;margin:0 0 1rem}
-.btn{display:inline-block;text-align:center;font-weight:700;text-decoration:none;border-radius:8px;padding:.7rem 1.1rem}
-.cdn .btn{background:var(--blue);color:var(--blue-ink)}
-.wa .btn{background:var(--wa);color:#fff}
-@media (prefers-color-scheme:dark){:root:not([data-theme="light"]) .wa .btn{color:#06231d}}
-:root[data-theme="dark"] .wa .btn{color:#06231d}
-.steps{list-style:none;counter-reset:s;padding:0;margin:1rem 0 1.25rem;display:grid;gap:.75rem}
-.steps li{counter-increment:s;display:grid;grid-template-columns:2rem 1fr;gap:.75rem;background:var(--surface);border:1px solid var(--line);border-radius:10px;padding:.9rem 1rem}
-.steps li::before{content:counter(s);font:800 1.125rem "JetBrains Mono",monospace;color:var(--blue)}
-.steps b{display:block}
-.go{display:inline-block;margin-bottom:2.5rem;background:var(--blue);color:var(--blue-ink);font-weight:700;text-decoration:none;border-radius:8px;padding:.7rem 1.1rem}
-footer{padding-bottom:2rem;color:var(--muted);font-size:.9375rem}
-.hero .old{animation:strike .9s .3s both}
-.hero .new{animation:rise .7s .9s both}
-@keyframes strike{from{opacity:1;text-decoration-color:transparent}to{opacity:.85}}
-@keyframes rise{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:none}}
-@media (prefers-reduced-motion:reduce){.hero .old,.hero .new{animation:none}}
+.card hr{border:0;border-top:3px dotted var(--line);margin:.25rem 0 1rem;width:100%}
+.url{font-size:.8125rem;color:var(--muted);margin:0 0 .9rem;word-break:break-all}
+.btn{display:inline-block;text-align:center;font-weight:700;text-decoration:none;border-radius:6px;padding:.7rem 1.1rem;background:var(--blue);color:var(--card)}
+.wa .btn{background:var(--ok)}
+:root[data-theme="dark"] .btn{color:#10161c}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]) .btn{color:#10161c}}
+footer{padding:0 0 2.5rem;color:var(--muted);font-size:.9375rem}
 </style>
 </head>
 <body>
-<header class="hero">
-  <div class="wrap">
-    <span class="status"><i></i>API aktif di domain baru</span>
-    <h1>REST API kami pindah ke Dinonic</h1>
-    <p class="lead">Synox API sudah tidak dipakai lagi. Sistemnya baru: login dulu, lalu buat API key sendiri.</p>
-    <div class="domains mono">
-      <div class="d old">api.synoxcloud.xyz</div>
-      <div class="d new" id="newdom">api.dinonic.web.id</div>
-    </div>
-    <button type="button" id="copy">Salin domain baru</button>
-  </div>
-</header>
-<main>
-  <div class="wrap">
-    <div class="note"><p>REST API ini akan selalu aktif, kecuali kalau suatu saat pindah domain lagi. Kabarnya selalu diumumkan di saluran Dinonic.</p></div>
+<div class="air"></div>
+<main class="wrap">
+  <h1>Alamat API kami berubah</h1>
+  <p class="lead">Synox API sudah tidak dipakai lagi. Sistemnya baru: login dulu, lalu buat API key sendiri.</p>
 
-    <h2>Jangan cuma ganti base URL</h2>
-    <p>Beberapa endpoint sudah pindah kategori, jadi path lama bisa tidak berlaku lagi. Cek dulu daftar endpoint terbaru sebelum mengubah kode.</p>
-    <ol class="steps">
-      <li><div><b>Cross-check endpoint</b><span class="muted">Cocokkan setiap endpoint yang kamu pakai dengan kategori barunya.</span></div></li>
-      <li><div><b>Login</b><span class="muted">Sistem baru memakai akun, tidak lagi akses bebas tanpa login.</span></div></li>
-      <li><div><b>Generate API key</b><span class="muted">Setelah login, buat API key dan pakai di setiap request.</span></div></li>
-      <li><div><b>Ganti base URL</b><span class="muted">Terakhir, arahkan request ke domain Dinonic.</span></div></li>
-    </ol>
-    <a class="go" href="https://api.dinonic.web.id/" rel="noopener">Login &amp; buat API key</a>
-    <h2>Contoh base URL</h2>
-    <p class="muted">Ini hanya bagian base URL. Path endpoint tetap harus kamu cek sendiri.</p>
+  <div class="label"><div class="in">
+    <div class="stamp">PINDAH</div>
+    <div class="addr"><span class="tag">Dari</span><span class="dom old mono">api.synoxcloud.xyz</span></div>
+    <hr>
+    <div class="addr"><span class="tag">Ke</span><span class="dom new mono" id="newdom">api.dinonic.web.id</span></div>
+    <button type="button" id="copy">Salin alamat baru</button>
+  </div></div>
+
+  <div class="note"><p>REST API ini akan selalu aktif, kecuali kalau suatu saat pindah domain lagi. Kabarnya selalu diumumkan di saluran Dinonic.</p></div>
+
+  <h2>Jangan cuma ganti base URL</h2>
+  <p class="muted">Beberapa endpoint sudah pindah kategori, jadi path lama bisa tidak berlaku lagi. Cek dulu sebelum mengubah kode.</p>
+  <ol class="steps">
+    <li><div><b>Cross-check endpoint</b><span class="muted">Cocokkan setiap endpoint yang kamu pakai dengan kategori barunya.</span></div></li>
+    <li><div><b>Login</b><span class="muted">Sistem baru memakai akun, tidak lagi akses bebas tanpa login.</span></div></li>
+    <li><div><b>Generate API key</b><span class="muted">Setelah login, buat API key dan pakai di setiap request.</span></div></li>
+    <li><div><b>Ganti base URL</b><span class="muted">Terakhir, arahkan request ke domain Dinonic.</span></div></li>
+  </ol>
+  <a class="go" href="https://api.dinonic.web.id/" rel="noopener">Login &amp; buat API key</a>
+
+  <h2>Contoh base URL</h2>
+  <p class="muted">Ini hanya bagian base URL. Path endpoint tetap harus kamu cek sendiri.</p>
 <pre class="mono"><span class="rm">- const BASE = "https://api.synoxcloud.xyz";</span><span class="ad">+ const BASE = "https://api.dinonic.web.id";</span></pre>
 
-    <div class="cards">
-      <section class="card cdn">
-        <h2>Uploader CDN</h2>
-        <p>Uploader seperti Catbox yang awet. File tersimpan di CDN Dinonic dan linknya bisa dibagikan.</p>
-        <div class="url mono">cdn.dinonic.cc.cd</div>
-        <a class="btn" href="https://cdn.dinonic.cc.cd/" rel="noopener">Buka uploader</a>
-      </section>
-      <section class="card wa">
-        <h2>Saluran info</h2>
-        <p>Update project, perubahan domain, dan pengumuman Dinonic lainnya.</p>
-        <div class="url mono">WhatsApp Channel</div>
-        <a class="btn" href="https://whatsapp.com/channel/0029Vb8g2ZyH5JLykgHzVu2g" rel="noopener">Gabung saluran</a>
-      </section>
-    </div>
+  <div class="cards">
+    <section class="card">
+      <h2>Uploader CDN</h2>
+      <p>Uploader seperti Catbox yang awet. File tersimpan di CDN Dinonic dan linknya bisa dibagikan.</p>
+      <hr><div class="url mono">cdn.dinonic.cc.cd</div>
+      <a class="btn" href="https://cdn.dinonic.cc.cd/" rel="noopener">Buka uploader</a>
+    </section>
+    <section class="card wa">
+      <h2>Saluran info</h2>
+      <p>Update project, perubahan domain, dan pengumuman Dinonic lainnya.</p>
+      <hr><div class="url mono">WhatsApp Channel</div>
+      <a class="btn" href="https://whatsapp.com/channel/0029Vb8g2ZyH5JLykgHzVu2g" rel="noopener">Gabung saluran</a>
+    </section>
   </div>
 </main>
 <footer><div class="wrap">Terima kasih sudah ikut pindah ke Dinonic.</div></footer>
 <script>
 document.getElementById("copy").addEventListener("click",function(){
   var b=this,t=document.getElementById("newdom").textContent;
-  function done(m){b.textContent=m;setTimeout(function(){b.textContent="Salin domain baru"},1800)}
+  function done(m){b.textContent=m;setTimeout(function(){b.textContent="Salin alamat baru"},1800)}
   try{navigator.clipboard.writeText(t).then(function(){done("Tersalin")},function(){done("Gagal menyalin")})}catch(e){done("Gagal menyalin")}
 });
 </script>
